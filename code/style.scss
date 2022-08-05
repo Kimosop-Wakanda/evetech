@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800&display=swap');
+
+
+$vividred: #cf2e2e;
+$palepink:#f78da7;
+$vividorange:#ff6900;
+$vividamber: #fcb900;
+$fontcolor:  rgb(7 7 44);
+$defaultfont:  'Nunito Sans', sans-serif;
+$fontweightlight: 300;
+$fontweightnormal: 400;
+$fontweightbold: 700;
+$fontweightbolder: 800;
+$navblue:rgb(5, 5, 17);
+$colourprimary:rgba(0, 0, 0, 0.95);
+$whitecolour: rgb(255, 255, 255);
+$buttoncolour:#20c997;
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $defaultfont;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear; 
+}
+html{
+    font-size: 63%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+
+
+
+}
+section{
+    padding: 2rem 9%;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: $vividred;
+    padding: .9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+    color: $whitecolour;
+
+    &:hover{
+        background: $buttoncolour;
+        color: $navblue;
+    }
+
+}
+
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #fff;
+    padding: 2rem 9%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0.5rem 1 rem rgba(0,0,0,.1);
+    
+
+    .logo{
+        font-size: 3rem;
+        color: $navblue;
+        font-weight: $fontweightbolder;
+        text-transform: uppercase;
+
+        span{
+            color: $vividorange;
+            text-transform: uppercase;
+        }
+    }
+    
+    .navbar a{
+        font-size: 2rem;
+        padding: 0 1.5rem;
+        color: $navblue;
+        cursor: pointer;
+
+        &:hover{
+            color: $vividorange;
+        }
+
+    }
+    .navicons a{
+        font-size: 2rem;
+        color: $navblue;
+        margin-left: 1.5rem;
+        cursor: pointer;
+
+        &:hover{
+            color: $vividorange;
+        }
+
+    }
+    #toggler{
+        display: none;
+    }
+    .fa-bars{
+        font-size: 3rem;
+        color: rgb(14, 32, 32);
+        border-radius: .5rem;
+        padding: .5rem 1.5rem;
+        cursor: pointer;
+        display: none;
+    }
+
+}
+
+/*home section*/
+
+.home{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url(../images/bg/bg\ 6.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .content{
+        max-width: 50rem;
+
+        h3{
+            font-size: 6rem;
+            color: $vividred;
+            font-weight: $fontweightbold;
+        }
+        span{
+            font-size: 3.5rem;
+            color: antiquewhite;
+            font-weight: $fontweightnormal;
+            padding: 1rem 0;
+            line-height: 1.5 ;
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*media queries*/
+ 
+@media (max-width:991px) {
+    html{
+        font-size: 55%;
+    }
+    header{
+        padding: 2rem;
+    }
+    section{
+        padding: 2rem;
+    }
+    .home{
+        background: url(../images/bg/bg\ 2.jpg);
+        background-position:center;
+        background-size: cover;
+        .content span{
+            font-weight: $fontweightbold;
+        }
+        .content h3{
+            font-weight: $fontweightbolder;
+        }
+    }
+}
+
+@media(max-width:768px) {
+    header{
+        .fa-bars{
+            display: block;
+        }
+
+        .navbar{
+            position: absolute;
+            top: 100%; left: 0; right: 0;
+            background-color: inherit;
+            //border-top: .1rem solid rgb(14, 32, 32);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+            a{
+               margin: 1.5rem;
+               padding: 1.5rem;
+               background:inherit ;
+              // border: .1rem solid rgba(0,0,0,.1);
+               display: block; 
+            }
+        }
+        #toggler:checked ~ .navbar{
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        }
+    }
+    .home .content{
+        h3{
+            font-size: 5rem;
+        }
+        span{
+            font-size: 2.5rem;
+        }
+
+    }
+}
+
+@media (max-width:450px) {
+    html{
+        font-size: 50%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
