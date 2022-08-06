@@ -28,6 +28,7 @@ $buttoncolour:#20c997;
     text-decoration: none;
     text-transform: capitalize;
     transition: .2s linear; 
+    scroll-behavior: smooth;
 }
 html{
     font-size: 63%;
@@ -149,22 +150,175 @@ header{
 
 }
 
+/*about section*/
+.about{
+   // background: url(../images/bg/bg\ 2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    h1{
+        color: $navblue;
+    }
+}
+
+.heading{
+    text-align: center;
+    font-size: 4rem;
+    color: #eee;
+    padding: 1rem;
+    margin: 2rem o;
+    background: inherit;
+
+    span{
+        color: $vividorange;
+    }
+}
+.about .row{
+    display: flex;
+    //flex-direction: column;
+   align-items: center;
+   gap: 2rem;
+   //flex-wrap: wrap;
+   padding: 2rem 0;
+   padding-bottom: 3rem;
+   
+
+}
+
+.about .row .image-container{
+    flex: 1 1 50%;
+    position: relative;
+
+    img{
+        width: 100%;
+        border: 1.5rem solid #fff;
+        border-radius: .5rem;
+        height: 100%;
+        object-fit: cover ;
+    }
+
+    h3{
+        position: absolute;
+        top: 50%; transform: translateY(-50%);
+        font-size: 3rem;
+        background-color: #fff;
+        width: 100%;
+        padding: 1rem 2rem;
+        overflow: hidden;
+        text-align: center;
+        mix-blend-mode: screen;
+    }
+}
+.about .row .content{
+    h3{
+        font-size: 2.5rem;
+    }
+
+    p{
+        text-transform: none;
+        font-size: 1.5rem;
+        padding: .5rem 0;
+        padding-top: 1rem;
+        line-height: 1.5;
+    }
+}
 
 
+.icons-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 
+    .icons{
+       background: #fff;
+       border: .1rem solid rgba(0,0,0,.1);
+       padding: 2rem;
+       display: flex;
+       align-items: center;
+       flex: 1 1 25rem; 
 
+       img{
+         height: 5rem;
+         margin-right: 2rem;
+       }
 
+       h3{
+         padding-bottom: .5rem;
+         font-size: 2rem;
+       }
 
+       span{
+        opacity: .6;
+        font-size: 1.5rem;
+       }
 
+    }
+}
+.products{
+    .box-container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
 
+        .box{
+           flex:1 1 30rem;
+           box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+           border-radius: .5rem;
+           border: .1rem solid rgba(0,0,0,.1);
+           position: relative; 
 
+           .discount{
+            position: absolute;
+            top: 1rem; left: 1rem;
+            padding: .7rem 1rem;
+            font-size: 1.5rem;
+            color: $vividred;
+            z-index: 1;
+            border-radius: .5rem;
+           }
 
+           .image{
+            position: relative;
+            text-align: center;
+            padding-top: 2rem;
+            overflow: hidden;
+            cursor: pointer;
 
+            img{
+                height: 25rem;
+                width: 30rem;
+                margin: 1rem;
 
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
 
+            
 
+           }
+           .content{
+                padding: 2rem;
+                text-align-last: center;
 
+                h3{
+                   font-size: 2.5rem;
+                    
+                }
+           }
+        } 
+       
+    }
+}
 
+   
+  
+   
+   
+     
+  
 
 
 /*media queries*/
@@ -226,11 +380,68 @@ header{
         }
 
     }
+    .about{
+        .heading{
+            font-size: 4rem;
+
+        }
+        .image-container {
+            
+            img{
+                width:60%;
+                height: 60%;
+                padding: 2rem;
+                
+            }
+            h3{
+                font-size: 2rem;
+            }
+        }
+        .content{
+            margin: 1rem;
+            width: 100%;
+            h3{
+                font-size: 3.5rem;
+
+            }
+            p{
+                font-size: 3rem;
+                margin: 1.5rem;
+            }
+        }
+        
+    }
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    .icons-container .icons {
+        h3{
+            padding-bottom: .5rem;
+            font-size: 2.7rem;
+        }
+   
+        span{
+           opacity: .6;
+           font-size: 2rem;
+        }
+        img{
+            height: 7rem;
+        }
+
+
+    }
+    
 }
 
 @media (max-width:450px) {
     html{
         font-size: 50%;
+    }
+    .heading{
+        font-size: 3rem;
     }
 }
 

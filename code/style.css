@@ -9,6 +9,7 @@
   text-decoration: none;
   text-transform: capitalize;
   transition: 0.2s linear;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -116,6 +117,146 @@ header .fa-bars {
   line-height: 1.5;
 }
 
+/*about section*/
+.about {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.about h1 {
+  color: rgb(5, 5, 17);
+}
+
+.heading {
+  text-align: center;
+  font-size: 4rem;
+  color: #eee;
+  padding: 1rem;
+  margin: 2rem o;
+  background: inherit;
+}
+.heading span {
+  color: #ff6900;
+}
+
+.about .row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 0;
+  padding-bottom: 3rem;
+}
+
+.about .row .image-container {
+  flex: 1 1 50%;
+  position: relative;
+}
+.about .row .image-container img {
+  width: 100%;
+  border: 1.5rem solid #fff;
+  border-radius: 0.5rem;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.about .row .image-container h3 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  background-color: #fff;
+  width: 100%;
+  padding: 1rem 2rem;
+  overflow: hidden;
+  text-align: center;
+  mix-blend-mode: screen;
+}
+
+.about .row .content h3 {
+  font-size: 2.5rem;
+}
+.about .row .content p {
+  text-transform: none;
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+  padding-top: 1rem;
+  line-height: 1.5;
+}
+
+.icons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.icons-container .icons {
+  background: #fff;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  flex: 1 1 25rem;
+}
+.icons-container .icons img {
+  height: 5rem;
+  margin-right: 2rem;
+}
+.icons-container .icons h3 {
+  padding-bottom: 0.5rem;
+  font-size: 2rem;
+}
+.icons-container .icons span {
+  opacity: 0.6;
+  font-size: 1.5rem;
+}
+
+.products .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.products .box-container .box {
+  flex: 1 1 30rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.products .box-container .box .discount {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.7rem 1rem;
+  font-size: 1.5rem;
+  color: #cf2e2e;
+  z-index: 1;
+  border-radius: 0.5rem;
+}
+.products .box-container .box .image {
+  position: relative;
+  text-align: center;
+  padding-top: 2rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+.products .box-container .box .image img {
+  height: 25rem;
+  width: 30rem;
+  margin: 1rem;
+}
+.products .box-container .box .image img:hover {
+  transform: scale(1.1);
+}
+.products .box-container .box .content {
+  padding: 2rem;
+  -moz-text-align-last: center;
+       text-align-last: center;
+}
+.products .box-container .box .content h3 {
+  font-size: 2.5rem;
+}
+
 /*media queries*/
 @media (max-width: 991px) {
   html {
@@ -168,9 +309,49 @@ header .fa-bars {
   .home .content span {
     font-size: 2.5rem;
   }
+  .about .heading {
+    font-size: 4rem;
+  }
+  .about .image-container img {
+    width: 60%;
+    height: 60%;
+    padding: 2rem;
+  }
+  .about .image-container h3 {
+    font-size: 2rem;
+  }
+  .about .content {
+    margin: 1rem;
+    width: 100%;
+  }
+  .about .content h3 {
+    font-size: 3.5rem;
+  }
+  .about .content p {
+    font-size: 3rem;
+    margin: 1.5rem;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .icons-container .icons h3 {
+    padding-bottom: 0.5rem;
+    font-size: 2.7rem;
+  }
+  .icons-container .icons span {
+    opacity: 0.6;
+    font-size: 2rem;
+  }
+  .icons-container .icons img {
+    height: 7rem;
+  }
 }
 @media (max-width: 450px) {
   html {
     font-size: 50%;
+  }
+  .heading {
+    font-size: 3rem;
   }
 }/*# sourceMappingURL=style.css.map */
