@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
 
 $vividred: #cf2e2e;
 $palepink:#f78da7;
 $vividorange:#ff6900;
 $vividamber: #fcb900;
 $fontcolor:  rgb(7 7 44);
+$productfont:'Source Code Pro', monospace;
 $defaultfont:  'Nunito Sans', sans-serif;
 $fontweightlight: 300;
 $fontweightnormal: 400;
@@ -223,6 +224,8 @@ header{
     }
 }
 
+/*icons section*/
+
 
 .icons-container{
     display: flex;
@@ -256,7 +259,14 @@ header{
 
     }
 }
+
+/*products section*/
+
+
 .products{
+    h1{
+        color: $navblue;
+    }
     .box-container{
         display: flex;
         flex-wrap: wrap;
@@ -304,13 +314,218 @@ header{
                 text-align-last: center;
 
                 h3{
-                   font-size: 2.5rem;
-                    
+                   font-size: 2rem;
+                   font-family: $productfont;
+
                 }
+
+                .price{
+                   font-size: 1.6rem;
+                   color: $vividorange;
+                   font-weight: $fontweightbold;
+                   padding-top: 1rem; 
+
+                   span{
+                    font-size: 1.3rem;
+                    color: $vividred;
+                    font-weight: $fontweightlight;
+                    text-decoration: line-through;
+                   }
+                }
+
+                
            }
         } 
        
     }
+}
+
+/*review section*/
+
+.review{
+    h1{
+        color: $navblue;
+
+        
+    }
+    .box-container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem; 
+    
+        .box{
+            flex: 1 1 30rem;
+            box-shadow: 0 .5rem rgba(0,0,0,.1);
+            border-radius: .5rem;
+            padding: 3rem 2rem;
+            position: relative;
+            border-radius: .1rem solid rgba(0, 0, 0, .1) ;
+    
+            .fa-quote-right{
+                position: absolute;
+                bottom: 3rem; right: 3rem;
+                font-size: 4rem;
+                color: #eee;
+            }
+            .stars{
+                i{
+                    color: #20c997;
+                    font-size: 1.6rem;
+                }
+                
+                
+            } 
+    
+            p{
+                font-size: 1.3rem;
+                line-height: 1.5;
+                opacity: .7; 
+                padding-top: 2rem;
+             }
+             h4{
+                font-weight: $fontweightbold;
+                font-size: 1.7rem;
+             }
+            
+        }
+
+        .user {
+            img{
+                height: 6rem; width: 6rem;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-right: 1rem;
+            }
+            h3{
+               font-size: 2rem;
+
+            }
+        }
+    }
+    
+} 
+
+
+/* contact section starts here*/
+
+.contact {
+
+    h1{
+        color: $navblue;
+    }
+
+    .row{
+        display: flex;
+        flex-wrap: wrap-reverse;
+        gap: 1.5rem;
+        align-items: center;
+    
+        .image{
+            flex:  1 1 40rem;
+    
+            img{
+                width: 100%;
+            }
+        }
+    
+        form{
+            flex: 1 1 40rem;
+            padding: 2rem 2.5rem;
+            box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+            border: .1rem solid rgba(0, 0, 0, .1);
+            border-radius: .5rem;
+    
+            .box{
+                padding: 1rem;
+                font-size: 1.7rem;
+                text-transform: none;
+                border: .1rem solid rgba(0, 0, 0, .1);
+                border-radius: .5rem;
+                margin: .7rem 0;
+                width: 100%;
+    
+                &:focus{
+                    border-color: $vividamber;
+                }
+            }
+    
+            textarea{
+                height: 15rem;
+                resize: none;
+            }
+    
+        }
+    
+        img{
+            flex: 1 1 40rem;
+        }
+    }
+}
+
+
+/*footer section starts*/
+
+.footer {
+    .box-container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    
+        .box{
+            flex: 1 1 25rem;
+            
+            h3{
+               font-size: 2.5rem;
+               font-weight: $fontweightbold;
+               padding: 1rem 0;
+    
+            }
+    
+            a{
+                display: block;
+                color: #666;
+                font-size: 1.5rem;
+                padding: 1rem 0;
+    
+    
+                &:hover{
+                    color: $vividred;
+                    text-decoration: underline;
+                }
+            }
+    
+            img{
+                margin-top: 1rem;
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+    
+    }
+
+    .credit{
+        text-align: center;
+        padding: 1.5rem;
+        margin-top: 1.5rem;
+        padding-top: 2.5rem;
+        font-size: 2rem;
+        color: $navblue;
+        font-weight: $fontweightbold;
+        border-top: .1rem solid rgba(0, 0, 0, .1);
+
+        span a{
+            color: #20c997;
+            text-decoration: none;
+            cursor: pointer;
+
+
+            &:hover{
+                color: #cf2e2e;
+            }
+            
+        }
+    }
+    
 }
 
    
