@@ -1,2 +1,2 @@
 # evetech
-online shop for electronics
+An Online Ecommerce shop selling electronic devices
