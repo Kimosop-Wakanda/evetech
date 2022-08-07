@@ -398,6 +398,9 @@ header .fa-bars {
   width: 2rem;
   height: 2rem;
 }
+.footer .box-container .box abbr {
+  text-transform: capitalize;
+}
 .footer .credit {
   text-align: center;
   padding: 1.5rem;

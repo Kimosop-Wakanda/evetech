@@ -499,7 +499,12 @@ header{
                 width: 2rem;
                 height: 2rem;
             }
+
+            abbr{
+                text-transform: capitalize;
+            }
         }
+        
     
     }
 
